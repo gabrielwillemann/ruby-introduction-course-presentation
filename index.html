@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="mytheme.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Introdução ao Ruby</h2>
+					<p>Gabriel Willemann</p>
+					<p><small>Curso ministrado na UDESC durante a SEMESO (Seminário de Engenharia de Software)</small></p>
+					<p><small>Ibirama, SC - 14/09/2018</small></p>
+				</section>
+
+				<section>
+					<h2>Paradigma Ruby</h2>
+					<ul>
+						<li>Mente aberta a novas ideias</li>
+						<li>Não seja resistente</li>
+						<li>Não tente comparar com outras linguagens</li>
+						<li>Misto de vários paradigmas de programação</li>
+						<li>Resistência só atrapalha o aprendizado</li>
+						<li>"Deixa o Ruby te levar"</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>O que é Ruby?</h2>
+					<ul>
+						<li>Linguagem de programação</li>
+						<li>Criada no Japão em 1995</li>
+						<li>Criador: Yukihiro Matsumoto (conhecido por Matz)</li>
+						<li>Objetivo: Desenvolver uma linguagem com uma sintaxe simples para reduzir a sobrecarga nos programadores</li>
+						<li>Algumas inspirações: Python, Perl, Smalltalk</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>O que é Ruby?</h2>
+					<p>"Eu queria uma linguagem de script que fosse mais poderosa do que Perl, e mais orientada a objetos do que Python. É por isso que eu decidi desenvolver minha própria linguagem." - Matz</p>
+				</section>
+
+				<section>
+					<h2>Ruby: Características</h2>
+					<ul>
+						<li>Linguagem de programação Interpretada</li>
+						<li>Open Source</li>
+						<li>Orientação a objetos: Forte, implícita e dinâmica</li>
+						<li>Principle of Least Surprise: Tudo se comporta de maneira previsível e sem surpresas ao programador</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>O que eu posso fazer com Ruby?</h2>
+					<ul>
+						<li>Posso criar sites? Sim</li>
+						<li>Posso criar mobile apps? Sim, mas esse não é foco</li>
+						<li>Posso criar desktop apps? Sim, mas esse não é foco</li>
+						<li>Uso comum do Ruby: Linguagem de servidor, normalmente utilizado para Backend Web/Mobile</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Mas eu quero...</h2>
+					<ul>
+						<li>Eu quero uma linguagem que eu possa utilizar meu código em várias plataformas!</li>
+						<li>Já que vou aprender uma linguagem, que seja uma linguagem que eu consiga usar em tudo!</li>
+						<li>Então, por que aprender Ruby?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Por que aprender Ruby?</h2>
+					<ul>
+						<li>Resposta: Mudança de mentalidade</li>
+						<li>Foco do Ruby: Produtividade do programador</li>
+						<li>Depois de aprender Ruby, você pode utilizar outras linguagens</li>
+						<li>A diferença, é que você utilizará com outra mentalidade</li>
+						<li>Uma mentalidade mais simples e produtiva</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Tecnologias baseadas na cultura Ruby</h2>
+					<ul>
+						<li>Laravel (PHP)</li>
+						<li>SailsJs (NodeJS)</li>
+						<li>Play (Java)</li>
+						<li>Crystal (Fast as C, Slick as Ruby)</li>
+						<li>Elixir (Progamação Funcional)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Comunidade Ruby</h2>
+					<ul>
+						<li>É considerada grande</li>
+						<li>Embora seja menor do que Java e PHP</li>
+						<li>Mas é uma comunidade muita ativa</li>
+						<li>No Brasil a comunidade ainda é pequena</li>
+						<li>Muito popular entre Startups</li>
+						<li>Muito popular na Ásia (Japão)</li>
+						<li>8ª linguagem mais utilizada no mundo em 2018</li>
+						<li>https://olhardigital.com.br/noticia/as-10-linguagens-de-programacao-mais-populares-do-mundo-em-2018/74538</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Quem utiliza Ruby</h2>
+					<ul>
+						<li>No mundo: Github, Grupon, Airnbn, Soundcloud, Bloomberg...</li>
+						<li>No Brasil: Locaweb, Resultados Digitais, Plataformatec...</li>
+						<li>As primeiras versões do Twitter foram contruídas com RoR</li>
+						<li>https://codificar.com.br/blog/porque-utilizar-o-ruby-on-rails-em-seu-projeto/</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>IDE</h2>
+					<ul>
+						<li>Esqueçam NetBeans, Eclipse...</li>
+						<li>Programador Ruby precisa de: Editor de texto e console/shell/terminal</li>
+						<li>Eu utilizo ATOM, mas é a escolha livre</li>
+						<li>Pode ser Notepad++, VSCode, VIM</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Executando o Ruby</h2>
+					<ul>
+						<li>www.ruby-lang.org/pt/documentation/installation</li>
+						<li>Após instalação, adicionar o diretório "rubydir/bin" na variável PATH</li>
+						<li>Para Windows é importante instalar o DevKit</li>
+						<li>Executar scripts por meio do console: ruby teste.rb</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Tipos primitivos</h2>
+					<ul>
+						<li>Não existem tipos primitivos em Ruby</li>
+						<li>Tudo é representado por Classes e Objetos</li>
+						<li>Exemplos: Integer, Float, String, Symbol, Boolean*, Array, Hash</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 1</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						myint = 1
+						myfloat = 1.45
+						mystring = 'abc'
+
+						puts myint, myint.class
+						puts myfloat, myfloat.class
+						puts mystring, mystring.class
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Integer e Float</h2>
+					<ul>
+						<li>Operadores matemáticos são métodos: + - * /</li>
+						<li>Parenteses é opcional na chamada de métodos</li>
+						<li>Isso é possível graças ao SyntaxSugar</li>
+						<li>Lista completa de métodos:</li>
+						<li>https://ruby-doc.org/core-2.5.0/Integer.html</li>
+						<li>https://ruby-doc.org/core-2.5.0/Float.html</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 2</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						a = 1
+						b = 2
+						puts a+b
+						puts a + b
+						puts a.+ b
+						puts a.+(b)
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Strings</h2>
+					<ul>
+						<li>Podem ser declaradas com aspas simples ou duplas</li>
+						<li>Aspas duplas permitem interpolação: "Conteúdo da variável é #{my_variable}"</li>
+						<li>As Strings ocupam endereços de memória diferentes</li>
+						<li>puts 'teste'.object_id     > 40777940</li>
+						<li>puts 'teste'.object_id     > 40777760</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Symbols</h2>
+					<ul>
+						<li>Symbols são Strings que sempre possuem o mesmo endereço de memória</li>
+						<li>São declaradas com dois pontos no seu início</li>
+						<li>myvariable = :test</li>
+						<li>puts :test.object_id      > 917788</li>
+						<li>puts :test.object_id      > 917788</li>
+						<li>Muito útil em configurações e parâmetros</li>
+						<li>Economiza memória</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 3</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						puts 'test'.object_id
+						puts 'test'.object_id
+						puts :test.object_id
+						puts :test.object_id
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Boolean</h2>
+					<ul>
+						<li>Não existe tipo "boolean"</li>
+						<li>Existem duas classes: TrueClass e FalseClass</li>
+						<li>Operadores de comparação também são métodos: == !=</li>
+						<li>https://ruby-doc.org/core-2.5.0/FalseClass.html</li>
+						<li>https://ruby-doc.org/core-2.5.0/TrueClass.html</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 4</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						a = true
+						puts a, a.class
+
+						b = false
+						puts b, b.class
+
+						puts "Igual? #{b == a}"
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Array</h2>
+					<ul>
+						<li>Lista que utiliza um índice sequencial</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 5</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						a = [55,'aa']
+						a << 'bb'
+
+						puts a.size
+						puts a[0]
+						puts a[1]
+						puts a[2]
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Hash</h2>
+					<ul>
+						<li>Lista ordenada por um índice de qualquer tipo</li>
+						<li>Normalmente estes índices são Symbols</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 6</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						a = {'a' => 100, 2 => 101}
+						a[:c] = 103
+
+						puts a.size
+						puts a['a']
+						puts a[2]
+						puts a[:c]
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Exemplo 7 - Condições</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						a = 1
+						if a == 1
+						  puts 'a é igual 1'
+						elsif a == 2
+						  puts 'a é igual 2'
+						else
+						  puts 'a é diferente de 1 e 2'
+						end
+
+						b = 0
+						puts 'a é igual 1 e b é igual 1' if a == 1 && b == 1
+						puts 'a é igual 1 ou b é igual 1' if a == 1 || b == 1
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Exemplo 8 - Iterações</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						i = 0
+						while i < 10
+						  puts i
+						  i = i.next
+						end
+
+						for i in 0..9
+						  puts i
+						end
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Iterações com Array e Hash</h2>
+					<ul>
+						<li>Em ruby "evita-se" utilizar o FOR para percorrer Array e Hash</li>
+						<li>Existem métodos específicos para percorrer estes objetos</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 9</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						a = [6,7,2,1,9]
+						a.each do |value|
+						  puts value
+						end
+						a.each_with_index do |value, key|
+						  puts "#{key} = #{value}"
+						end
+
+						h = {:a => 1, :b => 2, :c => 3}
+						h.each do |key, value|
+						  puts "#{key} = #{value}"
+						end
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Orientação a objetos - Métodos</h2>
+					<ul>
+						<li>Precedidos por "def"</li>
+						<li>Finalizados com "end"</li>
+						<li>"return" é opcional</li>
+						<li>Caso "return" não seja informado, é retornado a última linha</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Orientação a objetos - Propriedades</h2>
+					<ul>
+						<li>Precedidas com "@"</li>
+						<li>Sempre são private</li>
+						<li>Get e Set são implementados, mas do jeito "ruby"</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 10</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						class Person
+						  def initialize(name, age)
+						    @name = name
+						    @age = age
+						  end
+						  def name=(name)
+						    @name = name
+						  end
+						  def name
+						    @name
+						  end
+						  def to_s
+						    "Nome: #{@name} - Idade: #{@age}"
+						  end
+						end
+					</code></pre>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						p = Person.new('João', 30);
+						puts p
+						p.name = 'José'
+						puts p
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Orientação a objetos - Get e Set</h2>
+					<ul>
+						<li>Ruby facilita a implementação do Get e Set</li>
+						<li>Basta declarar "attr_accessor :PROPERTY_NAME"</li>
+						<li>Também pode ser utilizado: attr_reader e attr_writer</li>
+						<li>Recurso de metaprogramação</li>
+						<li>Injeta códigos dentro da classe, neste injeta os métodos</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 11</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						class Person
+						  attr_accessor :name, :age
+						  def initialize(name, age)
+						    @name = name
+						    @age = age
+						  end
+						  def to_s
+						    "Nome: #{@name} - Idade: #{@age}"
+						  end
+						end
+
+						p = Person.new('João', 30);
+						p.name = 'José'
+						puts p
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Visibilidade dos Métodos</h2>
+					<ul>
+						<li>Por padrão todos os métodos são "public"</li>
+						<li>Para métodos privados: Declarar "private" e todos os métodos posteriores serão privados</li>
+						<li>Para métodos protegidos: Declarar "protected"</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Métodos Estáticos</h2>
+					<ul>
+						<li>Precedidos pela palavra "self"</li>
+						<li>"def self.name_method CODE end"</li>
+						<li>Método pertence à classe</li>
+						<li>Método não pertence ao objeto</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 12</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						class MyFavoriteClass
+						  def method_public
+						    "#{my_method_private} => #{method_protected} => entry on method_public1"
+						  end
+						  def self.method_static
+						    'entry on method_static'
+						  end
+
+						  private
+						  def my_method_private
+						    'entry on method_private'
+						  end
+
+						  protected
+						  def method_protected
+						    'entry on method_protected'
+						  end
+						end
+
+						puts MyFavoriteClass::method_static
+
+						obj = MyFavoriteClass.new
+						puts obj.method_public
+						puts obj.method_static # Display ERROR
+						puts obj.method_protected # Display ERROR
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Orientação a objetos - Heranças</h2>
+					<ul>
+						<li>Herança são realizadas por meio do caracter "<"</li>
+						<li>class Animal</li>
+						<li>class Dog < Animal</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Orientação a objetos - Module e Mixins</h2>
+					<ul>
+						<li>Module são usados para definir "namespace"</li>
+						<li>Também são utilizados para "heranças múltiplas"</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 13</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						module System1
+						  class Person
+						    attr_accessor :name, :age
+						  end
+						end
+
+						p = System1::Person.new
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Exemplo 14</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						module CommonMethods
+						  def default_message
+						    'executed successfully'
+						  end
+						end
+
+						class Person
+						  include CommonMethods
+						  attr_accessor :name, :age
+						end
+
+						puts Person.new.default_message
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Múltiplos arquivos</h2>
+					<ul>
+						<li>Requisição a outros arquivos é feito pelo comando: "require"</li>
+						<li>require './file.rb'</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 15</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						class Person
+						  attr_accessor :name, :age
+						  def to_s
+						    "Nome: #{@name} - Idade: #{@age}"
+						  end
+						end
+					</code></pre>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						require './person.rb'
+
+						p = Person.new
+						p.name = 'João'
+						p.age = 27
+						puts p
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Exceções</h2>
+					<ul>
+						<li>Lançar exceção: raise 'Exception descripetion'</li>
+						<li>Tratar exceção: begin CODE rescue CODE end</li>
+						<li>Classe Exception é pai de todas as exceções</li>
+						<li>Suas Exceptions devem herdar StandardError</li>
+						<li>Herança de Exception é destinado a erros de sintaxe, memória, fileloads</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 16</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						class InvalidNameError < StandardError
+						end
+
+						class Person
+						  def name=(name)
+						    raise InvalidNameError, "#{name} is a invalid name" if name.nil? || name.size <= 3
+						    @name = name
+						  end
+						  def name
+						    @name
+						  end
+						end
+
+						begin
+						  p = Person.new
+						  p.name = 'Bob'
+						  puts p
+						rescue InvalidNameError => e
+						  puts "Incorrect name: #{e}"
+						rescue => e
+						  puts "Unknown expcetion: #{e}"
+						end
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Exemplo 17</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						class MyClass
+						  def my_method
+						    raise 'Exception description'
+						  rescue => e
+						    puts e
+						  end
+						end
+						MyClass.new.my_method
+
+						# DANGER: Rescue inline no have class filters
+						my_variable = raise 'exception' rescue 0
+						puts "my_variable is #{my_variable}"
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Padrões e convenções</h2>
+					<ul>
+						<li>Indentação: 2 espaços</li>
+						<li>Nomes de classes: CamelCase</li>
+						<li>Nomes de variáveis e métodos: snake_case</li>
+						<li>Existem vários, mas estes são os mais importantes</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Gems</h2>
+					<ul>
+						<li>É um Gerenciador de pacotes</li>
+						<li>Ferramenta para gerenciar bibliotecas</li>
+						<li>Facilita a disponibilização e a instalação</li>
+						<li>Essas bibliotecas devem possuir um formato auto-suficiente (baixo acoplamento)</li>
+						<li>Gems vem do inglês "joias"</li>
+						<li>Componentização é algo estimulado na comunidade Ruby</li>
+						<li>Repositório padrão de bibliteocas Ruby: rubygems.org</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Gems</h2>
+					<ul>
+						<li>Se você criou alguma biblioteca interessante, disponibilize para toda comunidade</li>
+						<li>Exemplo: Criei um rotina para ler arquivos CSV de uma maneira ultra rápida. É fácil disponibilizar para toda comunidade utilizadando o RubyGems.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Utilizando as GEMS</h2>
+					<ul>
+						<li>Passo 1: Procurar no repositório RubyGems</li>
+						<li>Passo 2: Executar o comando "gem install NAME_GEM"</li>
+						<li>GEM instalada com sucesso e pronta para uso</li>
+						<li>Comando para ver todas as Gems instaladas: "gem list"</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>GEM para manipulação de CSV</h2>
+					<p>Executar o comando "gem install csv"</p>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						require 'csv'
+
+						csv_string = CSV.generate(:col_sep => ';') do |csv|
+						  csv << ['Name','Age']
+						  csv << ['João',30]
+						  csv << ['José',20]
+						  csv << ['Gabriel',50]
+						end
+						File.write('./people.csv', csv_string)
+
+						CSV.foreach('./people.csv', :col_sep => ';') do |row|
+						  row.each do |value|
+						    puts value
+						  end
+						end
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Bundler</h2>
+					<ul>
+						<li>Pense que seu projeto possui 50 gems</li>
+						<li>Você vai instalar todas manualmente? Uma por uma?</li>
+						<li>Bundler uma GEM que automatiza a instalação de outras gems</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Bundler</h2>
+					<ul>
+						<li>Passo 1: "gem install bundler"</li>
+						<li>Passo 2: Criar um arquivo na pasta do projeto chamado "Gemfile" (sem extensão)</li>
+						<li>Passo 3: No Gemfile, adicionar o comando "gem 'rtf', '~> 0.3.3'"</li>
+						<li>Passo 4: Na pasta do projeto, executar o comando "bundle install"</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exemplo 19</h2>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						# Gemfile
+						source 'https://rubygems.org'
+
+						gem 'rtf', '~> 0.3.3'
+					</code></pre>
+					<pre><code class="hljs ruby" data-trim contenteditable>
+						require 'rtf'
+
+						document = RTF::Document.new(RTF::Font.new(RTF::Font::ROMAN, 'Times New Roman'))
+
+						document.paragraph << 'The first paragraph'
+						document.paragraph << 'The second paragraph'
+
+						File.write('new.rtf', document.to_rtf)
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Ruby: Web Frameworks</h2>
+					<ul>
+						<li>Ruby on Rails: Web framework MVC (mais popular)</li>
+						<li>Sinatra: Web framework (microestrutura)</li>
+						<li>Hanami: Web framework com uma estrutura modular e com baixo acoplamento</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Perguntas?</h2>
+					<ul>
+                        <li>Download em:</li>
+                        <li>https://github.com/gabrielwillemann/ruby-introduction-course-presentation</li>
+                    </ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="node_modules/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				transition: 'slide',
+				slideNumber: true,
+				dependencies: [
+					{ src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				]
+			});
+
+		</script>
+	</body>
+</html>

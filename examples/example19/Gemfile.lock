@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rtf (0.3.3)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  rtf (~> 0.3.3)
+
+BUNDLED WITH
+   1.16.3
