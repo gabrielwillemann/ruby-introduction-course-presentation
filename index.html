@@ -8,11 +8,11 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="libs/reveal.css">
 		<link rel="stylesheet" href="mytheme.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="libs/zenburn.css">
 	</head>
 
 	<body>
@@ -733,8 +733,8 @@
 			</div>
 		</div>
 
-		<script src="node_modules/reveal.js/lib/js/head.min.js"></script>
-		<script src="node_modules/reveal.js/js/reveal.js"></script>
+		<script src="libs/head.min.js"></script>
+		<script src="libs/reveal.js"></script>
 
 		<script>
 
@@ -747,7 +747,7 @@
 				transition: 'slide',
 				slideNumber: true,
 				dependencies: [
-					{ src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'libs/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 				]
 			});
 
